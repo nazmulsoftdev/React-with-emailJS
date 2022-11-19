@@ -1,0 +1,119 @@
+/* Form-container */
+
+.Form-container {
+    width: 600px;
+    margin: auto;
+}
+
+
+/* first-section */
+
+.first-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-section input {
+    padding: 10px 15px;
+    flex: 1;
+    margin: 5px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+@media screen and (max-width: 450px) {
+    .first-section {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .first-section input {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* second-section */
+
+.second-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.second-section input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    flex: 1;
+    margin: 5px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+@media screen and (max-width: 450px) {
+    .second-section {
+        flex-direction: column;
+    }
+    .second-section input {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* third-section */
+
+.third-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.third-section textarea {
+    padding: 10px 15px;
+    flex: 1;
+    margin: 5px;
+    height: 200px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+
+/* four-section */
+
+.four-section {
+    margin-top: 10px;
+}
+
+.four-section button {
+    padding: 8px 40px;
+    /* From https://css.glass */
+    background: rgba(46, 204, 113, 1);
+    color: #ffff;
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
