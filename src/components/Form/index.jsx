@@ -7,11 +7,11 @@ import Swal from "sweetalert2";
 
 function Form() {
   const [SendTo, setSendTo] = useState({
-    userName: "",
-    userEmai: "",
-    userSubject: "",
-    userPhone: "",
-    userMessage: "",
+    name: "",
+    email: "",
+    subject: "",
+    phone: "",
+    message: "",
   });
 
   // Form input handle
@@ -35,6 +35,13 @@ function Form() {
             showConfirmButton: false,
             timer: 1500,
           });
+          setSendTo({
+            name: "",
+            email: "",
+            subject: "",
+            phone: "",
+            message: "",
+          });
         },
         (error) => {
           Swal.fire({
@@ -46,13 +53,6 @@ function Form() {
           });
         }
       );
-    setSendTo({
-      userName: "",
-      userEmai: "",
-      userSubject: "",
-      userPhone: "",
-      userMessage: "",
-    });
   };
 
   return (
@@ -60,13 +60,17 @@ function Form() {
       <form onSubmit={HandleForm}>
         <div className="first-section">
           <Input
-            name="userName"
+            type="text"
+            name="name"
+            value={SendTo.name}
             placeholder="Full Name"
             required="required"
             onChange={handleInput}
           />
           <Input
-            name="userEmail"
+            type="email"
+            name="email"
+            value={SendTo.email}
             placeholder="Email"
             required="required"
             onChange={handleInput}
@@ -74,13 +78,17 @@ function Form() {
         </div>
         <div className="second-section">
           <Input
-            name="userSubject"
+            type="text"
+            name="subject"
+            value={SendTo.subject}
             placeholder="Subject"
             required="required"
             onChange={handleInput}
           />
           <Input
-            name="userPhone"
+            type="number"
+            name="phone"
+            value={SendTo.phone}
             placeholder="Phone Number"
             required="required"
             onChange={handleInput}
@@ -88,7 +96,9 @@ function Form() {
         </div>
         <div className="third-section">
           <textarea
-            name="userMessage"
+            type="text"
+            name="message"
+            value={SendTo.message}
             placeholder="Messagee"
             required="required"
             onChange={handleInput}
